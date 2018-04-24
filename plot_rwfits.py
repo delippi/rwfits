@@ -22,8 +22,10 @@ except:
 # rms   line 3
 
 # stats is defined as stats( exp, lev, stat ), where stat(count, rms, bias)
-stats=np.zeros([5,11,3])
-stats2=np.zeros([5,1,3])
+stats_omf=np.zeros([5,11,3])
+stats_oma=np.zeros([5,11,3])
+stats2_omf=np.zeros([5,1,3])
+stats2_oma=np.zeros([5,1,3])
 
 if(var == 'RMS'):   experiments=['c008', '019']
 if(var == 'BIAS'):  experiments=['c008', '019', '021', '022', '023']
@@ -35,35 +37,31 @@ levels2   =['2000.0']
 levels_int=np.arange(0,11,1)
 levels2_int=np.arange(0,1,1)
 
-
+common_dir='/gpfs/gd3/emc/meso/noscrub/Donald.E.Lippi/com/namrr/'
 
 for expi in range(len(experiments)):
     exp=experiments[expi]
     print exp
-    it=3
+    omf_it=1
+    oma_it=3
     iti=0
-    try:
-        filename='/gpfs/gd3/emc/meso/noscrub/Donald.E.Lippi/com/namrr/rw_'+exp+'/'+pdy+'/namrr.t'+cyc+'z.fits_conusnest.tm'+tmxx
-        with open(filename,'r') as searchfile:
-             skiprows=1
-             for line in searchfile:
-                 skiprows=skiprows+1
-                 if "current vfit of radar wind data" in line:
-                     iti=iti+1
-                     if(it==iti):
-                        break
-        df=pd.read_csv(filename,skiprows=skiprows,delimiter=r"\s+",nrows=4)
-    except:
-        filename='/gpfs/gd3/emc/meso/noscrub/Donald.E.Lippi/com/namrr/rw_'+exp+'/namrr.'+pdy+'/namrr.t'+cyc+'z.fits_conusnest.tm'+tmxx
-        with open(filename,'r') as searchfile:
-             skiprows=1
-             for line in searchfile:
-                 skiprows=skiprows+1
-                 if "current vfit of radar wind data" in line:
-                     iti=iti+1
-                     if(it==iti):
-                        break
-        df=pd.read_csv(filename,skiprows=skiprows,delimiter=r"\s+",nrows=4)
+    #filename=common_dir+'rw_'+exp+'/'+pdy+'/namrr.t'+cyc+'z.fits_conusnest.tm'+tmxx
+    filename=common_dir+'rw_'+exp+'/namrr.'+pdy+'/namrr.t'+cyc+'z.fits_conusnest.tm'+tmxx
+    
+# GET STATS FROM FILE
+    with open(filename,'r') as searchfile:
+         skiprows=1
+         for line in searchfile:
+             skiprows=skiprows+1
+             if "current vfit of radar wind data" in line:
+                 iti=iti+1
+                 if(omf_it==iti):
+                    skiprows_omf=skiprows
+                 if(oma_it==iti):
+                    skiprows_oma=skiprows
+                    break
+    df_omf=pd.read_csv(filename,skiprows=skiprows_omf,delimiter=r"\s+",nrows=4)
+    df_oma=pd.read_csv(filename,skiprows=skiprows_oma,delimiter=r"\s+",nrows=4)
 
 
 
@@ -71,12 +69,15 @@ for expi in range(len(experiments)):
         level=levels[levi] # string name for df[level]
         print(level)
         for stati in range(3):
-            stats[expi,levi,stati]=float(df[level][stati+1])
+            stats_omf[expi,levi,stati]=float(df_omf[level][stati+1])
+            stats_oma[expi,levi,stati]=float(df_oma[level][stati+1])
+
     for levi2 in range(len(levels2)):
         level2=levels2[levi2] # string name for df[level]
         print(level2)
         for stati2 in range(3):
-            stats2[expi,levi2,stati2]=float(df[level2][stati2+1])
+            stats2_omf[expi,levi2,stati2]=float(df_omf[level2][stati2+1])
+            stats2_oma[expi,levi2,stati2]=float(df_oma[level2][stati2+1])
 
 
 
@@ -85,29 +86,16 @@ plt.figure(figsize=(10,6))#
 fig_title_fontsize=18     #
 xy_label_fontsize=14      #
 tick_label_fontsize=12    #
-legend_fontsize=10        #
-dot_size=15
+legend_fontsize=8.8       #<=9
+dot_size=40
+l_dot_size=5
 linewidth=2
 ###########################
 
 
 
-##Plot 1 - BIAS
-#ax1=plt.subplot(1,2,1)
-#ax1.plot(stats[1,:,1]-stats[0,:,1],levels_int,color='black',label='w_only - control: bias')
-##ax1.plot(stats[1,:,1],levels_int,color='black',label='w_only: bias',linewidth=2)
-##ax1.plot(stats[0,:,1],levels_int,color='#ff0044',label='control: bias',linewidth=2)
-#ax1.axvline(x=0,color='lightgray')
-#ax1.set_yticks(levels_int)
-#ax1.set_yticklabels(levels)
-#ax1.axvline(x=0)
-#plt.xlabel('BIAS (m/s)',fontsize=xy_label_fontsize)
-#plt.ylabel('vertical layer (hPa)',fontsize=xy_label_fontsize)
-#plt.setp(ax1.get_xticklabels(),visible=True,fontsize=tick_label_fontsize)
-#plt.setp(ax1.get_yticklabels(),visible=True,fontsize=tick_label_fontsize)
-#ax1.legend(fontsize=legend_fontsize)
 
-#Plot 2 - RMS
+#Plot 2
 if(var=='COUNT'): vari=0
 if(var=='BIAS'): vari=1
 if(var=='RMS'): vari=2
@@ -118,7 +106,7 @@ ax2=plt.subplot(1,1,1)
 ylow=0; yhigh=12; ax2.set_ylim(ylow,yhigh)
 
 if(var=='COUNT'):
-   xlow=0; xhigh=250000; ax2.set_xlim(xlow,xhigh)
+   xlow=0; xhigh=350000; ax2.set_xlim(xlow,xhigh)
    plt.xlabel(var,fontsize=xy_label_fontsize)
 
 if(var == 'BIAS'):
@@ -126,49 +114,41 @@ if(var == 'BIAS'):
    plt.xlabel(var+' (m/s)',fontsize=xy_label_fontsize)
 
 if(var=='RMS'):
-   xlow=-3; xhigh=3; ax2.set_xlim(xlow,xhigh)
+   xlow=0; xhigh=3; ax2.set_xlim(xlow,xhigh)
    plt.xlabel(var+' (m/s)',fontsize=xy_label_fontsize)
 
 if(True):
    # XP
-   ax2.plot(stats[0,:,vari],levels_int,color='black',label='control',linewidth=linewidth)
-   ax2.plot(stats[1,:,vari],levels_int,color='#ff0044',label='w_only',linewidth=linewidth)
-   ax2.plot(stats[2,:,vari],levels_int,color='#55ff00',label='w_so_elev5',linewidth=linewidth)
-   ax2.plot(stats[3,:,vari],levels_int,color='#00aaff',label='w_so_elev10',linewidth=linewidth)
-   ax2.plot(stats[4,:,vari],levels_int,color='#8800ff',label='so_elev10',linewidth=linewidth)
-
-   # control - XP
-   ax2.plot(stats[1,:,vari]-stats[0,:,vari],levels_int,color='#ff0044',label='w_only - control',linestyle='--',linewidth=linewidth)
-   ax2.plot(stats[2,:,vari]-stats[0,:,vari],levels_int,color='#55ff00',label='w_so_elev5 - control',linestyle='--',linewidth=linewidth)
-   ax2.plot(stats[3,:,vari]-stats[0,:,vari],levels_int,color='#00aaff',label='w_so_elev10 - control',linestyle='--',linewidth=linewidth)
-   ax2.plot(stats[4,:,vari]-stats[0,:,vari],levels_int,color='#8800ff',label='so_elev10 - control',linestyle='--',linewidth=linewidth)
+   #omf
+   ax2.plot(stats_omf[0,:,vari],levels_int,color='#000000',marker='o',markersize=l_dot_size,label='control omf',    linewidth=linewidth,linestyle='-')
+   ax2.plot(stats_omf[1,:,vari],levels_int,color='#ff0044',marker='o',markersize=l_dot_size,label='w_only omf',     linewidth=linewidth,linestyle='-')
+   ax2.plot(stats_omf[2,:,vari],levels_int,color='#55ff00',marker='o',markersize=l_dot_size,label='w_so_elev5 omf', linewidth=linewidth,linestyle='-')
+   ax2.plot(stats_omf[3,:,vari],levels_int,color='#00aaff',marker='o',markersize=l_dot_size,label='w_so_elev10 omf',linewidth=linewidth,linestyle='-')
+   ax2.plot(stats_omf[4,:,vari],levels_int,color='#8800ff',marker='o',markersize=l_dot_size,label='so_elev10 omf',  linewidth=linewidth,linestyle='-')
+   #oma
+   ax2.plot(stats_oma[0,:,vari],levels_int,color='#000000',marker='^',markersize=l_dot_size,label='control oma',    linewidth=linewidth,linestyle='--')
+   ax2.plot(stats_oma[1,:,vari],levels_int,color='#ff0044',marker='^',markersize=l_dot_size,label='w_only oma',     linewidth=linewidth,linestyle='--')
+   ax2.plot(stats_oma[2,:,vari],levels_int,color='#55ff00',marker='^',markersize=l_dot_size,label='w_so_elev5 oma', linewidth=linewidth,linestyle='--')
+   ax2.plot(stats_oma[3,:,vari],levels_int,color='#00aaff',marker='^',markersize=l_dot_size,label='w_so_elev10 oma',linewidth=linewidth,linestyle='--')
+   ax2.plot(stats_oma[4,:,vari],levels_int,color='#8800ff',marker='^',markersize=l_dot_size,label='so_elev10 oma',  linewidth=linewidth,linestyle='--')
 
    #0-2000 hpa level
-   y_of_dot=stats2[0,:,vari]*0+0.125
-   ax2.scatter(stats2[1,:,vari]-stats2[0,:,vari], y_of_dot , marker='o',s=dot_size,color="#ff0044",label='column aggregate (w_only-control)')
-   ax2.scatter(stats2[2,:,vari]-stats2[0,:,vari], y_of_dot , marker='o',s=dot_size,color="#55ff00",label='column aggregate (w_so_elev5-control)')
-   ax2.scatter(stats2[3,:,vari]-stats2[0,:,vari], y_of_dot , marker='o',s=dot_size,color="#00aaff",label='column aggregate (w_so_elev10-control)')
-   ax2.scatter(stats2[4,:,vari]-stats2[0,:,vari], y_of_dot , marker='o',s=dot_size,color="#8800ff",label='column aggregate (so_elev10-control)')
+   y_of_dot_omf=stats2_omf[0,:,vari]*0+0.5
+   y_of_dot_oma=stats2_omf[0,:,vari]*0+0.25
 
+   #omf
+   ax2.scatter(stats2_omf[0,:,vari],y_of_dot_omf, marker='o',s=dot_size,color="#000000",label='control omf (t. atm.)')
+   ax2.scatter(stats2_omf[1,:,vari],y_of_dot_omf, marker='o',s=dot_size,color="#ff0044",label='w_only omf (t. atm.)')
+   ax2.scatter(stats2_omf[2,:,vari],y_of_dot_omf, marker='o',s=dot_size,color="#55ff00",label='w_so_elev5 omf (t. atm.)')
+   ax2.scatter(stats2_omf[3,:,vari],y_of_dot_omf, marker='o',s=dot_size,color="#00aaff",label='w_so_elev10 omf (t. atm.)')
+   ax2.scatter(stats2_omf[4,:,vari],y_of_dot_omf, marker='o',s=dot_size,color="#8800ff",label='so_elev10 omf (t. atm.)')
+   #oma
+   ax2.scatter(stats2_oma[0,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#000000",label='control oma (t. atm.)')
+   ax2.scatter(stats2_oma[1,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#ff0044",label='w_only oma (t. atm.)')
+   ax2.scatter(stats2_oma[2,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#55ff00",label='w_so_elev5 oma (t. atm.)')
+   ax2.scatter(stats2_oma[3,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#00aaff",label='w_so_elev10 oma (t. atm.)')
+   ax2.scatter(stats2_oma[4,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#8800ff",label='so_elev10 oma (t. atm.)')
 
-#if(var=='COUNT'):
-#   xlow=0; xhigh=350000; ax2.set_xlim(xlow,xhigh)
-#   ax2.plot(stats[0,:,vari],levels_int,color='black',label='control')
-#   ax2.plot(stats[1,:,vari],levels_int,color='#ff0044',label='w_only')
-#   ax2.plot(stats[2,:,vari],levels_int,color='#55ff00',label='w_so_elev5')
-#   ax2.plot(stats[3,:,vari],levels_int,color='#00aaff',label='w_so_elev10')
-#   ax2.plot(stats[4,:,vari],levels_int,color='#8800ff',label='so_elev10')
-#   plt.xlabel(var,fontsize=xy_label_fontsize)
-#
-#if(var == 'BIAS'):
-#   xlow=-1.0; xhigh=1.; ax2.set_xlim(xlow,xhigh)
-#   ax2.plot(stats[1,:,vari]-stats[0,:,vari],levels_int,color='#ff0044',label='w_only - control',linestyle='--')
-#   ax2.plot(stats[0,:,vari],levels_int,color='black',label='control')
-#   ax2.plot(stats[1,:,vari],levels_int,color='#ff0044',label='w_only')
-#   #ax2.plot(stats[2,:,vari],levels_int,color='#55ff00',label='w_so_elev5')
-#   #ax2.plot(stats[3,:,vari],levels_int,color='#00aaff',label='w_so_elev10')
-#   #ax2.plot(stats[4,:,vari],levels_int,color='#8800ff',label='so_elev10')
-#   plt.xlabel(var,fontsize=xy_label_fontsize)
 
 ax2.set_yticks(levels_int)
 ax2.set_yticklabels(levels)
@@ -176,11 +156,12 @@ ax2.axvline(x=0,color='lightgray')
 plt.ylabel('vertical layer (hPa)',fontsize=xy_label_fontsize)
 plt.setp(ax2.get_xticklabels(),visible=True,fontsize=tick_label_fontsize)
 plt.setp(ax2.get_yticklabels(),visible=True,fontsize=tick_label_fontsize)
-leg=ax2.legend(fontsize=legend_fontsize,ncol=3,scatterpoints =1)
+#leg=ax2.legend(fontsize=legend_fontsize,ncol=4,scatterpoints=1,loc='upper center',bbox_to_anchor=(0.,-0.2,1.,.102))
+leg=ax2.legend(fontsize=legend_fontsize,ncol=4,scatterpoints=1,loc='upper center')
 leg.get_frame().set_alpha(0.9)
 
 
-plt.suptitle('Radar winds O-F statistics: %s \n %s t%sz tm%s' % (var,pdy,cyc,tmxx),fontsize=fig_title_fontsize,x=0.5,y=1.00)
-plt.savefig('./'+var+'_'+pdy+'.namrr.t'+cyc+'z.fits_conusnest.tm'+tmxx+'.png',bbox_inches='tight')
+title=plt.suptitle('CONUS Radar winds OmF OmA statistics: %s \n %s t%sz tm%s' % (var,pdy,cyc,tmxx),fontsize=fig_title_fontsize,x=0.5,y=1.00)
+plt.savefig('./'+var+'_'+pdy+'.namrr.t'+cyc+'z.fits_conusnest.tm'+tmxx+'.png',bbox_extra_artists=(leg,title,),bbox_inches='tight')
 
 
