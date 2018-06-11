@@ -3,6 +3,7 @@ PDY='20151030'
 CYC='00 06 12 18'
 TMXX='00'
 VAR='BIAS RMS COUNT'
+VAR='RMS COUNT'
 #VAR='RMS'
 #VAR='COUNT'
 
@@ -25,7 +26,9 @@ for var in $VAR; do
                    fig2=${var}_20151030.namrr.t06z.fits_conusnest.tm00.png
                    fig3=${var}_20151030.namrr.t12z.fits_conusnest.tm00.png
                    fig4=${var}_20151030.namrr.t18z.fits_conusnest.tm00.png
+                   legend=legend.png
                    montage -tile 2x2 -geometry +4+4 $fig1 $fig2 $fig3 $fig4 ${var}_20151030.namrr.t00-18z.fits_conusnest.tm00.png
+                   montage -tile 1x2 -geometry +4+4 ${var}_20151030.namrr.t00-18z.fits_conusnest.tm00.png $legend ${var}_20151030.namrr.t00-18z.fits_conusnest_legend.tm00.png
                    rm -f $fig1 $fig2 $fig3 $fig4
                 fi
             done
