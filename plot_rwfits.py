@@ -188,3 +188,5 @@ else: #no legend
    #plt.savefig('./'+var+'_'+pdy+'.namrr.t'+cyc+'z.fits_conusnest.tm'+tmxx+'.png',bbox_extra_artists=(title,),bbox_inches='tight')
    plt.savefig('./'+var+'_'+pdy+'.fv3gfs.t'+cyc+'z.rwfits.tm'+tmxx+'.png',bbox_extra_artists=(title,),bbox_inches='tight')
 
+print("your figs are located here:")
+print(common_dir)

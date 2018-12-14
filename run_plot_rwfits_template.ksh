@@ -19,7 +19,7 @@ for var in $VAR; do
         for cyc in $CYC; do
             for tmxx in $TMXX; do
                 echo $pdy $cyc $tmxx $var
-                python /scratch4/NCEPDEV/fv3-cam/save/Donald.E.Lippi/PhD-globalOSSE/rwfits/plot_rwfits.py $pdy $cyc $tmxx $var
+                python /scratch4/NCEPDEV/fv3-cam/save/Donald.E.Lippi/PhD-globalRadarOSSE/rwfits/plot_rwfits.py $pdy $cyc $tmxx $var
                 #if [[ $cyc == '06' && $montage == '.true.' ]]; then
                 #   fig1=${var}_${pdy}.fv3gfs.t${cyc}z.rwfits.tm${tmxx}.png
                 #   #fig1=${var}_20151030.namrr.t06z.fits_conusnest.tm00.png
