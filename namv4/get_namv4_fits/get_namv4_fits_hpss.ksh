@@ -42,12 +42,12 @@ while [ $valtime -lt $end ]; do
 if [[ $machine == "THEIA" ]]; then
 cat << EOF > ./jobs/archive_namrr_${envir}_${valtime}.ksh
 #!/bin/ksh
-#PBS -N namrr_${valtime}
+#PBS -N namrr_${envir}_${valtime}
 #PBS -l walltime=01:00:00
 #PBS -l procs=1
 #PBS -q service
 #PBS -A fv3-cpu
-#PBS -o ./logs/namrr_${valtime} 
+#PBS -o ./logs/namrr_${envir}_${valtime} 
 #PBS -j oe
 
 export ndate=/nwprod/util/exec/ndate
@@ -59,13 +59,13 @@ else
 cat << EOF > ./jobs/archive_namrr_${envir}_${valtime}.ksh
 #!/bin/ksh
 #BSUB -P ibm                      # project code
-#BSUB -J namrr_${valtime}   # job name
+#BSUB -J namrr_${envir}_${valtime}   # job name
 #BSUB -W 03:00                    # wall-clock time (hrs:mins)
 #BSUB -n 1                        # number of tasks in job
 #BSUB -R "affinity[core]"         # number of cores
 #BSUB -R "rusage[mem=8000]"       # number of cores
 #BSUB -q transfer                 # queue
-#BSUB -o ./logs/namrr_${valtime}   # output file name in which %J is replaced by the job ID
+#BSUB -o ./logs/namrr_${envir}_${valtime}   # output file name in which %J is replaced by the job ID
 
 export ndate=/nwprod/util/exec/ndate
 #cd /gpfs/gd3/emc/meso/noscrub/Donald.E.Lippi/com/namrr
