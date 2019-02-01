@@ -10,14 +10,14 @@ fi
 
 start=$1
 end=$2
-envir=$3
+hr=$3
+envir=$4
 
 if [[ $start == "" ]];then; start=2015103000; fi
 if [[ $end   == "" ]];then;   end=2015103000; fi
-if [[ $envir == "" ]];then; envir="rw_022"; fi
+if [[ $hr    == "" ]];then;    hr=06;         fi
+if [[ $envir == "" ]];then; envir="rw_022";   fi
 
-
-hr=01
 
 HPSS_RETENTION_PERIOD='5year'
 HPSS_GROUP='emc-meso'
@@ -40,14 +40,14 @@ while [ $valtime -lt $end ]; do
 
 
 if [[ $machine == "THEIA" ]]; then
-cat << EOF > archive_namrr_input_${valtime}.ksh
+cat << EOF > ./jobs/archive_namrr_${envir}_${valtime}.ksh
 #!/bin/ksh
 #PBS -N namrr_${valtime}
 #PBS -l walltime=01:00:00
 #PBS -l procs=1
 #PBS -q service
 #PBS -A fv3-cpu
-#PBS -o namrr_${valtime} 
+#PBS -o ./logs/namrr_${valtime} 
 #PBS -j oe
 
 export ndate=/nwprod/util/exec/ndate
@@ -56,7 +56,7 @@ cd /scratch4/NCEPDEV/fv3-cam/noscrub/Donald.E.Lippi/com/namrr
 EOF
 
 else
-cat << EOF > archive_namrr_input_${valtime}.ksh
+cat << EOF > ./jobs/archive_namrr_${envir}_${valtime}.ksh
 #!/bin/ksh
 #BSUB -P ibm                      # project code
 #BSUB -J namrr_${valtime}   # job name
@@ -65,7 +65,7 @@ cat << EOF > archive_namrr_input_${valtime}.ksh
 #BSUB -R "affinity[core]"         # number of cores
 #BSUB -R "rusage[mem=8000]"       # number of cores
 #BSUB -q transfer                 # queue
-#BSUB -o namrr_${valtime}   # output file name in which %J is replaced by the job ID
+#BSUB -o ./logs/namrr_${valtime}   # output file name in which %J is replaced by the job ID
 
 export ndate=/nwprod/util/exec/ndate
 #cd /gpfs/gd3/emc/meso/noscrub/Donald.E.Lippi/com/namrr
@@ -75,7 +75,7 @@ EOF
 fi
 
 #append non machine specific part
-cat << EOF >> archive_namrr_input_${valtime}.ksh
+cat << EOF >> ./jobs/archive_namrr_${envir}_${valtime}.ksh
 
 start=${valtime}
 

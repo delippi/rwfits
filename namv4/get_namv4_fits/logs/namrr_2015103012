@@ -1,0 +1,429 @@
+Start Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:50:27 UTC 2019 on Mother Superior(head node): tfe02
+Node Access Status = SHARED
+Job 37358376.bqs3 started for user Donald.E.Lippi in queue service
+End Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:50:27 UTC 2019 
+_______________________________________________________________
+
+Welcome to Theia
+  This system is Cray CS400 Linux Cluster
+
+Update History:
+
+  Version: v4.0-ad-2017.03.14
+    -- Included other informational messages to
+       better identify anomalies and provide
+       additional troubleshooting info.
+
+  Version: v3.5-ad-2017.02.23
+    -- Modified prologue for RHEL7 cmem clearing
+
+  Version: v3.3-ad-2016.04.08
+    -- Added cach clearing before streams check
+       to eliminate potential false positives
+
+type:
+  module avail
+  for various Available Modules
+
+_______________________________________________________
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+Start Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:50:28 UTC 2019 on Mother Superior(head node): tfe01
+Node Access Status = SHARED
+Job 37358381.bqs3 started for user Donald.E.Lippi in queue service
+End Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:50:28 UTC 2019 
+_______________________________________________________________
+
+Welcome to Theia
+  This system is Cray CS400 Linux Cluster
+
+Update History:
+
+  Version: v4.0-ad-2017.03.14
+    -- Included other informational messages to
+       better identify anomalies and provide
+       additional troubleshooting info.
+
+  Version: v3.5-ad-2017.02.23
+    -- Modified prologue for RHEL7 cmem clearing
+
+  Version: v3.3-ad-2016.04.08
+    -- Added cach clearing before streams check
+       to eliminate potential false positives
+
+type:
+  module avail
+  for various Available Modules
+
+_______________________________________________________
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+Start Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:50:28 UTC 2019 on Mother Superior(head node): tfe03
+Node Access Status = SHARED
+Job 37358386.bqs3 started for user Donald.E.Lippi in queue service
+End Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:50:29 UTC 2019 
+_______________________________________________________________
+
+Welcome to Theia
+  This system is Cray CS400 Linux Cluster
+
+Update History:
+
+  Version: v4.0-ad-2017.03.14
+    -- Included other informational messages to
+       better identify anomalies and provide
+       additional troubleshooting info.
+
+  Version: v3.5-ad-2017.02.23
+    -- Modified prologue for RHEL7 cmem clearing
+
+  Version: v3.3-ad-2016.04.08
+    -- Added cach clearing before streams check
+       to eliminate potential false positives
+
+type:
+  module avail
+  for various Available Modules
+
+_______________________________________________________
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+Start Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:50:29 UTC 2019 on Mother Superior(head node): tfe02
+Node Access Status = SHARED
+Job 37358391.bqs3 started for user Donald.E.Lippi in queue service
+End Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:50:29 UTC 2019 
+_______________________________________________________________
+
+Welcome to Theia
+  This system is Cray CS400 Linux Cluster
+
+Update History:
+
+  Version: v4.0-ad-2017.03.14
+    -- Included other informational messages to
+       better identify anomalies and provide
+       additional troubleshooting info.
+
+  Version: v3.5-ad-2017.02.23
+    -- Modified prologue for RHEL7 cmem clearing
+
+  Version: v3.3-ad-2016.04.08
+    -- Added cach clearing before streams check
+       to eliminate potential false positives
+
+type:
+  module avail
+  for various Available Modules
+
+_______________________________________________________
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits_conusnest.tm06
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits_conusnest.tm05
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits_conusnest.tm04
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits_conusnest.tm03
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits_conusnest.tm02
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits_conusnest.tm01
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits_conusnest.tm00
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits2_conusnest.tm06
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits2_conusnest.tm05
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits2_conusnest.tm04
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits2_conusnest.tm03
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits2_conusnest.tm02
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits2_conusnest.tm01
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits2_conusnest.tm00
+_______________________________________________________________
+Start Epilogue v4.0-ad-2017.03.14 Fri Feb  1 15:50:35 UTC 2019 
+Job 37358386.bqs3 finished for user Donald.E.Lippi in queue service with exit code 72
+Node Access Status = SHARED
+No OOM errors or BUG(s) found. Node OK.
+Statistics  cput=00:00:03,energy_used=0,mem=0kb,vmem=0kb,walltime=00:00:07
+End Epilogue v4.0-ad-2017.03.14 Fri Feb  1 15:50:35 UTC 2019
+_______________________________________________________________
+Terminated
+_______________________________________________________________
+Start Epilogue v4.0-ad-2017.03.14 Fri Feb  1 15:50:42 UTC 2019 
+Terminated
+_______________________________________________________________
+Start Epilogue v4.0-ad-2017.03.14 Fri Feb  1 15:50:42 UTC 2019 
+Job 37358376.bqs3 finished for user Donald.E.Lippi in queue service with exit code 143
+Node Access Status = SHARED
+No OOM errors or BUG(s) found. Node OK.
+Statistics  cput=00:00:03,energy_used=0,mem=9432kb,vmem=405112kb,walltime=00:00:15
+End Epilogue v4.0-ad-2017.03.14 Fri Feb  1 15:50:42 UTC 2019
+_______________________________________________________________
+Terminated
+Job 37358381.bqs3 finished for user Donald.E.Lippi in queue service with exit code 143
+Node Access Status = SHARED
+No OOM errors or BUG(s) found. Node OK.
+_______________________________________________________________
+Start Epilogue v4.0-ad-2017.03.14 Fri Feb  1 15:50:42 UTC 2019 
+Statistics  cput=00:00:03,energy_used=0,mem=9440kb,vmem=405112kb,walltime=00:00:14
+End Epilogue v4.0-ad-2017.03.14 Fri Feb  1 15:50:42 UTC 2019
+_______________________________________________________________
+Job 37358391.bqs3 finished for user Donald.E.Lippi in queue service with exit code 143
+Node Access Status = SHARED
+No OOM errors or BUG(s) found. Node OK.
+Statistics  cput=00:00:03,energy_used=0,mem=9432kb,vmem=405112kb,walltime=00:00:13
+End Epilogue v4.0-ad-2017.03.14 Fri Feb  1 15:50:43 UTC 2019
+_______________________________________________________________
+Start Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:52:43 UTC 2019 on Mother Superior(head node): tfe03
+Node Access Status = SHARED
+Job 37358446.bqs3 started for user Donald.E.Lippi in queue service
+End Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:52:44 UTC 2019 
+_______________________________________________________________
+
+Welcome to Theia
+  This system is Cray CS400 Linux Cluster
+
+Update History:
+
+  Version: v4.0-ad-2017.03.14
+    -- Included other informational messages to
+       better identify anomalies and provide
+       additional troubleshooting info.
+
+  Version: v3.5-ad-2017.02.23
+    -- Modified prologue for RHEL7 cmem clearing
+
+  Version: v3.3-ad-2016.04.08
+    -- Added cach clearing before streams check
+       to eliminate potential false positives
+
+type:
+  module avail
+  for various Available Modules
+
+_______________________________________________________
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+Start Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:52:44 UTC 2019 on Mother Superior(head node): tfe02
+Node Access Status = SHARED
+Job 37358451.bqs3 started for user Donald.E.Lippi in queue service
+End Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:52:44 UTC 2019 
+_______________________________________________________________
+
+Welcome to Theia
+  This system is Cray CS400 Linux Cluster
+
+Update History:
+
+  Version: v4.0-ad-2017.03.14
+    -- Included other informational messages to
+       better identify anomalies and provide
+       additional troubleshooting info.
+
+  Version: v3.5-ad-2017.02.23
+    -- Modified prologue for RHEL7 cmem clearing
+
+  Version: v3.3-ad-2016.04.08
+    -- Added cach clearing before streams check
+       to eliminate potential false positives
+
+type:
+  module avail
+  for various Available Modules
+
+_______________________________________________________
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+Start Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:52:45 UTC 2019 on Mother Superior(head node): tfe01
+Node Access Status = SHARED
+Job 37358456.bqs3 started for user Donald.E.Lippi in queue service
+End Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:52:45 UTC 2019 
+_______________________________________________________________
+
+Welcome to Theia
+  This system is Cray CS400 Linux Cluster
+
+Update History:
+
+  Version: v4.0-ad-2017.03.14
+    -- Included other informational messages to
+       better identify anomalies and provide
+       additional troubleshooting info.
+
+  Version: v3.5-ad-2017.02.23
+    -- Modified prologue for RHEL7 cmem clearing
+
+  Version: v3.3-ad-2016.04.08
+    -- Added cach clearing before streams check
+       to eliminate potential false positives
+
+type:
+  module avail
+  for various Available Modules
+
+_______________________________________________________
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+Start Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:52:45 UTC 2019 on Mother Superior(head node): tfe03
+Node Access Status = SHARED
+Job 37358461.bqs3 started for user Donald.E.Lippi in queue service
+End Prologue v4.0-ad-2017.03.14 Fri Feb  1 15:52:46 UTC 2019 
+_______________________________________________________________
+
+Welcome to Theia
+  This system is Cray CS400 Linux Cluster
+
+Update History:
+
+  Version: v4.0-ad-2017.03.14
+    -- Included other informational messages to
+       better identify anomalies and provide
+       additional troubleshooting info.
+
+  Version: v3.5-ad-2017.02.23
+    -- Modified prologue for RHEL7 cmem clearing
+
+  Version: v3.3-ad-2016.04.08
+    -- Added cach clearing before streams check
+       to eliminate potential false positives
+
+type:
+  module avail
+  for various Available Modules
+
+_______________________________________________________
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits_conusnest.tm06
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits_conusnest.tm05
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits_conusnest.tm04
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits_conusnest.tm03
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits_conusnest.tm02
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits_conusnest.tm01
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits_conusnest.tm00
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits2_conusnest.tm06
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits2_conusnest.tm05
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits2_conusnest.tm04
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits2_conusnest.tm03
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits2_conusnest.tm02
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits2_conusnest.tm01
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+ERROR: [FATAL] no such HPSS archive file: /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar
+HTAR: HTAR FAILED
+###WARNING  htar returned non-zero exit status.
+            72 = /apps/hpss/bin/htar -xvf /NCEPDEV/emc-meso/5year/Donald.E.Lippi/rw_NAMv4/nwrw_020/rh2015/201510/20151030/meso2_noscrub_Donald.E.Lippi_com_namrr_rw_020_namrr.2015103012.bufr.tar ./namrr.t12z.fits2_conusnest.tm00
+_______________________________________________________________
+Start Epilogue v4.0-ad-2017.03.14 Fri Feb  1 15:52:51 UTC 2019 
+Job 37358456.bqs3 finished for user Donald.E.Lippi in queue service with exit code 72
+Node Access Status = SHARED
+No OOM errors or BUG(s) found. Node OK.
+Statistics  cput=00:00:03,energy_used=0,mem=5912kb,vmem=157348kb,walltime=00:00:06
+End Epilogue v4.0-ad-2017.03.14 Fri Feb  1 15:52:51 UTC 2019
+_______________________________________________________________
