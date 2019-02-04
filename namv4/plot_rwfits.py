@@ -86,21 +86,15 @@ for expi in range(len(experiments)):
 
 ###################################
 fig = plt.figure(1,figsize=(10,6))#
-fig_title_fontsize=18             #
-xy_label_fontsize=16              #
-tick_label_fontsize=14            #
-legend_fontsize=8.8               #8.8
-dot_size=50                       #40
-l_dot_size=7                      #5
-linewidth=3                       #2
+fig_title_fontsize=23             #18
+xy_label_fontsize=21              #16
+tick_label_fontsize=19            #14
+legend_fontsize=11.               #8.8
+dot_size=60                       #40
+l_dot_size=8                      #5
+linewidth=4                       #2
 ###################################
 
-
-
-
-if(var=='COUNT'): vari=0
-if(var=='BIAS'): vari=1
-if(var=='RMS'): vari=2
 
 plot_all_exps=True
 
@@ -109,15 +103,23 @@ ax1 = fig.add_subplot(111)
 ylow=0; yhigh=levs; ax1.set_ylim(ylow,yhigh)
 
 if(var=='COUNT'):
-   xlow=0; xhigh=350000; ax1.set_xlim(xlow,xhigh)
-   plt.xlabel(var,fontsize=xy_label_fontsize)
+   vari=0
+   scale_factor=1000.
+   xlow=0/scale_factor; xhigh=350000/scale_factor; ax1.set_xlim(xlow,xhigh)
+   plt.xlabel(var+r'($\times 10^{3}$)',fontsize=xy_label_fontsize)
+   stats_omb[:,:,vari]=stats_omb[:,:,vari]/scale_factor
+   stats_oma[:,:,vari]=stats_oma[:,:,vari]/scale_factor
 
 if(var == 'BIAS'):
-   xlow=-1.0; xhigh=1.; ax1.set_xlim(xlow,xhigh)
+   vari=1
+   scale_factor=1.
+   xlow=-0.5; xhigh=0.5; ax1.set_xlim(xlow,xhigh)
    plt.xlabel(var+' (m/s)',fontsize=xy_label_fontsize)
 
 if(var=='RMS'):
-   xlow=0; xhigh=3; ax1.set_xlim(xlow,xhigh)
+   vari=2
+   scale_factor=1.
+   xlow=0.0; xhigh=2.5; ax1.set_xlim(xlow,xhigh)
    plt.xlabel(var+' (m/s)',fontsize=xy_label_fontsize)
 
 if(True):
@@ -154,6 +156,8 @@ if(True):
 
 
 ax1.set_yticks(levels_int)
+for l in range(len(levels)): #this loops improves y axis labels (e.g., converts 1000.0 to 1000)
+    levels[l] = str(int(float(levels[l])))
 ax1.set_yticklabels(levels)
 ax1.axvline(x=0,color='lightgray')
 plt.ylabel('vertical layer (hPa)',fontsize=xy_label_fontsize)
@@ -166,11 +170,11 @@ if(include_legend and not legend_is_separate_figure):
    leg=ax1.legend(fontsize=legend_fontsize,ncol=4,scatterpoints=1,loc='upper center',bbox_to_anchor=(0.,-0.2,1.,.102))
    leg=ax1.legend(fontsize=legend_fontsize,ncol=4,scatterpoints=1,loc='upper center')
    leg.get_frame().set_alpha(0.9)
-   title=plt.suptitle('CONUS Radar winds OmB OmA statistics: %s \n %s t%sz tm%s' % (var,pdy,cyc,tmxx),fontsize=fig_title_fontsize,x=0.5,y=1.00)
+   title=plt.suptitle('CONUS Radar winds OmB OmA statistics: %s \n %s t%sz tm%s' % (var,pdy,cyc,tmxx),fontsize=fig_title_fontsize,x=0.5,y=1.05)
    plt.savefig('./'+var+'_'+pdy+'.namrr.t'+cyc+'z.fits_conusnest.tm'+tmxx+'.png',bbox_extra_artists=(leg,title,),bbox_inches='tight')
 
 elif(include_legend and legend_is_separate_figure):
-   title=plt.suptitle('CONUS Radar winds OmB OmA statistics: %s \n %s t%sz tm%s' % (var,pdy,cyc,tmxx),fontsize=fig_title_fontsize,x=0.5,y=1.00)
+   title=plt.suptitle('CONUS Radar winds OmB OmA statistics: %s \n %s t%sz tm%s' % (var,pdy,cyc,tmxx),fontsize=fig_title_fontsize,x=0.5,y=1.05)
    plt.savefig('./'+var+'_'+pdy+'.namrr.t'+cyc+'z.fits_conusnest.tm'+tmxx+'.png',bbox_extra_artists=(title,),bbox_inches='tight')
    plt.ion(); plt.show() #; plt.pause(0.001); raw_input("Press [enter] to continue.") #create a blocking figure and waits for user to inspect
    figlegend = plt.figure(2,figsize=(20,2))

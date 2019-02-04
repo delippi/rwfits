@@ -10,7 +10,7 @@ montage='.true.'
 
 #PDY='20151030'
 #CYC='09'
-#VAR='RMS'
+#VAR='COUNT'
 
 set -x
 
@@ -31,7 +31,7 @@ for var in $VAR; do
                    montage -tile 2x2 -geometry +4+4 $fig1 $fig2 $fig3 $fig4 $newfig1
                    #identify $newfig1
                    montage -tile 1x2 -geometry +4+4 $newfig1 $legend $newfig2
-                   rm -f $fig1 $fig2 $fig3 $fig4
+                   rm -f $fig1 $fig2 $fig3 $fig4 $newfig1
                 fi
             done
         done
