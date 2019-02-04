@@ -1,15 +1,15 @@
 #!/bin/ksh
 PDY='20151030'
-CYC='00'
+CYC='09 12 15 18'
 TMXX='00'
 VAR='BIAS RMS COUNT'
 #VAR='RMS COUNT'
-VAR='RMS'
+#VAR='RMS'
 
-montage='.false.'
+montage='.true.'
 
 #PDY='20151030'
-#CYC='00'
+#CYC='09'
 #VAR='RMS'
 
 set -x
@@ -20,15 +20,18 @@ for var in $VAR; do
             for tmxx in $TMXX; do
                 echo $pdy $cyc $tmxx $var
                 python plot_rwfits.py $pdy $cyc $tmxx $var
-                if [[ $cyc == '06' && $montage == '.true.' ]]; then
-                   fig1=${var}_${pdy}.fv3gfs.t${cyc}z.rwfits.tm${tmxx}.png
-                   #fig1=${var}_20151030.namrr.t06z.fits_conusnest.tm00.png
-                   #fig3=${var}_20151030.namrr.t12z.fits_conusnest.tm00.png
-                   #fig4=${var}_20151030.namrr.t18z.fits_conusnest.tm00.png
+                if [[ $cyc == '18' && $montage == '.true.' ]]; then
+                   fig1=${var}_20151030.namrr.t09z.fits_conusnest.tm00.png
+                   fig2=${var}_20151030.namrr.t12z.fits_conusnest.tm00.png
+                   fig3=${var}_20151030.namrr.t15z.fits_conusnest.tm00.png
+                   fig4=${var}_20151030.namrr.t18z.fits_conusnest.tm00.png
                    legend=legend.png
-                   #montage -tile 2x2 -geometry +4+4 $fig1 $fig2 $fig3 $fig4 ${var}_20151030.namrr.t00-18z.fits_conusnest.tm00.png
-                   montage -tile 1x2 -geometry +4+4 $fig1 $legend ${var}_${pdy}.fv3gfs.t${cyc}z.rwfits.tm${tmxx}_leg.png
-                   rm -f $fig1 
+                   newfig1=${var}_20151030.namrr.t00-18z.fits_conusnest.tm00.png
+                   newfig2=${var}_20151030.namrr.t00-18z.fits_conusnest_legend.tm00.png
+                   montage -tile 2x2 -geometry +4+4 $fig1 $fig2 $fig3 $fig4 $newfig1
+                   #identify $newfig1
+                   montage -tile 1x2 -geometry +4+4 $newfig1 $legend $newfig2
+                   rm -f $fig1 $fig2 $fig3 $fig4
                 fi
             done
         done

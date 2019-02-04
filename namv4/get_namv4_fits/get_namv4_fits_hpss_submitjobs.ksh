@@ -1,8 +1,11 @@
+#This script is used to pull namv4 radial wind experiments from tape.
+
+
 start=2015103000
 #end=2015103000
 end=2015103100
-hr=06
-envirs="rw_c008 rw_019 rw_020 rw_021 rw_022"
+hr=03
+envirs="rw_c008 rw_019 rw_021 rw_022 rw_023"
 
 mkdir -p ./logs
 mkdir -p ./jobs

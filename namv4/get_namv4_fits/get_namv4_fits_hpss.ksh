@@ -1,5 +1,5 @@
 #!/bin/ksh
-
+#This script should be run by the "submitjobs" script located in the same directory.
 machine="THEIA"
 if [[ $machine == "THEIA" ]]; then
    export ndate=/home/Donald.E.Lippi/bin/ndate
