@@ -3,7 +3,7 @@ PDY='20151030'
 CYC='09 12 15 18'
 TMXX='00'
 VAR='BIAS RMS COUNT'
-#VAR='RMS COUNT'
+VAR='COUNT'
 #VAR='RMS'
 
 montage='.true.'

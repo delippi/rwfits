@@ -93,6 +93,7 @@ legend_fontsize=11.               #8.8
 dot_size=60                       #40
 l_dot_size=8                      #5
 linewidth=4                       #2
+linewidth_larger=4                #2
 ###################################
 
 
@@ -105,10 +106,11 @@ ylow=0; yhigh=levs; ax1.set_ylim(ylow,yhigh)
 if(var=='COUNT'):
    vari=0
    scale_factor=1000.
-   xlow=0/scale_factor; xhigh=350000/scale_factor; ax1.set_xlim(xlow,xhigh)
+   xlow=0/scale_factor; xhigh=120000/scale_factor; ax1.set_xlim(xlow,xhigh)
    plt.xlabel(var+r'($\times 10^{3}$)',fontsize=xy_label_fontsize)
    stats_omb[:,:,vari]=stats_omb[:,:,vari]/scale_factor
    stats_oma[:,:,vari]=stats_oma[:,:,vari]/scale_factor
+   linewidth_larger=8
 
 if(var == 'BIAS'):
    vari=1
@@ -125,10 +127,10 @@ if(var=='RMS'):
 if(True):
    # XP
    #omb
-   ax1.plot(stats_omb[0,:,vari],levels_int,color='#000000',marker='o',markersize=l_dot_size,label='control OmB',    linewidth=linewidth,linestyle='-')
+   ax1.plot(stats_omb[0,:,vari],levels_int,color='#000000',marker='o',markersize=l_dot_size,label='control OmB',    linewidth=linewidth_larger,linestyle='-')
    ax1.plot(stats_omb[1,:,vari],levels_int,color='#ff0044',marker='o',markersize=l_dot_size,label='w_incl OmB',     linewidth=linewidth,linestyle='-')
    ax1.plot(stats_omb[2,:,vari],levels_int,color='#ff8c00',marker='o',markersize=l_dot_size,label='w_so_elev5 OmB', linewidth=linewidth,linestyle='-')
-   ax1.plot(stats_omb[3,:,vari],levels_int,color='#00aaff',marker='o',markersize=l_dot_size,label='w_so_elev10 OmB',linewidth=linewidth,linestyle='-')
+   ax1.plot(stats_omb[3,:,vari],levels_int,color='#00aaff',marker='o',markersize=l_dot_size,label='w_so_elev10 OmB',linewidth=linewidth_larger,linestyle='-')
    ax1.plot(stats_omb[4,:,vari],levels_int,color='#8800ff',marker='o',markersize=l_dot_size,label='so_elev10 OmB',  linewidth=linewidth,linestyle='-')
 #   #oma
    ax1.plot(stats_oma[0,:,vari],levels_int,color='#000000',marker='^',markersize=l_dot_size,label='control OmA',    linewidth=linewidth,linestyle='--')
