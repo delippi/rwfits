@@ -7,7 +7,6 @@ else
    export ndate=/nwprod/util/exec/ndate
 fi
 
-
 start=$1
 end=$2
 hr=$3
@@ -42,13 +41,12 @@ while [ $valtime -lt $end ]; do
 if [[ $machine == "THEIA" ]]; then
 cat << EOF > ./jobs/archive_namrr_${envir}_${valtime}.ksh
 #!/bin/ksh
-#PBS -N namrr_${envir}_${valtime}
-#PBS -l walltime=01:00:00
-#PBS -l procs=1
-#PBS -q service
-#PBS -A fv3-cpu
-#PBS -o ./logs/namrr_${envir}_${valtime} 
-#PBS -j oe
+#SBATCH --job-name=namrr_${envir}_${valtime}
+#SBATCH --time=00:10:00
+#SBATCH --ntasks=1
+#SBATCH --partition=service
+#SBATCH --account=fv3-cpu
+#SBATCH --output=./logs/namrr_${envir}_${valtime} 
 
 export ndate=/nwprod/util/exec/ndate
 cd /scratch4/NCEPDEV/fv3-cam/noscrub/Donald.E.Lippi/com/namrr

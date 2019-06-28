@@ -126,14 +126,14 @@ if(True):
    # XP
    #omb
    ax1.plot(stats_omb[0,:,vari],levels_int,color='#000000',marker='o',markersize=l_dot_size,label='control OmB',    linewidth=linewidth,linestyle='-')
-   ax1.plot(stats_omb[1,:,vari],levels_int,color='#ff0044',marker='o',markersize=l_dot_size,label='w_only OmB',     linewidth=linewidth,linestyle='-')
-   ax1.plot(stats_omb[2,:,vari],levels_int,color='#228200',marker='o',markersize=l_dot_size,label='w_so_elev5 OmB', linewidth=linewidth,linestyle='-')
+   ax1.plot(stats_omb[1,:,vari],levels_int,color='#ff0044',marker='o',markersize=l_dot_size,label='w_incl OmB',     linewidth=linewidth,linestyle='-')
+   ax1.plot(stats_omb[2,:,vari],levels_int,color='#ff8c00',marker='o',markersize=l_dot_size,label='w_so_elev5 OmB', linewidth=linewidth,linestyle='-')
    ax1.plot(stats_omb[3,:,vari],levels_int,color='#00aaff',marker='o',markersize=l_dot_size,label='w_so_elev10 OmB',linewidth=linewidth,linestyle='-')
    ax1.plot(stats_omb[4,:,vari],levels_int,color='#8800ff',marker='o',markersize=l_dot_size,label='so_elev10 OmB',  linewidth=linewidth,linestyle='-')
 #   #oma
    ax1.plot(stats_oma[0,:,vari],levels_int,color='#000000',marker='^',markersize=l_dot_size,label='control OmA',    linewidth=linewidth,linestyle='--')
-   ax1.plot(stats_oma[1,:,vari],levels_int,color='#ff0044',marker='^',markersize=l_dot_size,label='w_only OmA',     linewidth=linewidth,linestyle='--')
-   ax1.plot(stats_oma[2,:,vari],levels_int,color='#228200',marker='^',markersize=l_dot_size,label='w_so_elev5 OmA', linewidth=linewidth,linestyle='--')
+   ax1.plot(stats_oma[1,:,vari],levels_int,color='#ff0044',marker='^',markersize=l_dot_size,label='w_incl OmA',     linewidth=linewidth,linestyle='--')
+   ax1.plot(stats_oma[2,:,vari],levels_int,color='#ff8c00',marker='^',markersize=l_dot_size,label='w_so_elev5 OmA', linewidth=linewidth,linestyle='--')
    ax1.plot(stats_oma[3,:,vari],levels_int,color='#00aaff',marker='^',markersize=l_dot_size,label='w_so_elev10 OmA',linewidth=linewidth,linestyle='--')
    ax1.plot(stats_oma[4,:,vari],levels_int,color='#8800ff',marker='^',markersize=l_dot_size,label='so_elev10 OmA',  linewidth=linewidth,linestyle='--')
 
@@ -143,14 +143,14 @@ if(True):
 
    #omb
    ax1.scatter(stats2_omb[0,:,vari],y_of_dot_omb, marker='o',s=dot_size,color="#000000")#,label='control omb (t. atm.)')
-   ax1.scatter(stats2_omb[1,:,vari],y_of_dot_omb, marker='o',s=dot_size,color="#ff0044")#,label='w_only omb (t. atm.)')
-   ax1.scatter(stats2_omb[2,:,vari],y_of_dot_omb, marker='o',s=dot_size,color="#228200")#,label='w_so_elev5 omb (t. atm.)') #55ff00
+   ax1.scatter(stats2_omb[1,:,vari],y_of_dot_omb, marker='o',s=dot_size,color="#ff0044")#,label='w_incl omb (t. atm.)')
+   ax1.scatter(stats2_omb[2,:,vari],y_of_dot_omb, marker='o',s=dot_size,color="#ff8c00")#,label='w_so_elev5 omb (t. atm.)') #55ff00
    ax1.scatter(stats2_omb[3,:,vari],y_of_dot_omb, marker='o',s=dot_size,color="#00aaff")#,label='w_so_elev10 omb (t. atm.)')
    ax1.scatter(stats2_omb[4,:,vari],y_of_dot_omb, marker='o',s=dot_size,color="#8800ff")#,label='so_elev10 omb (t. atm.)')
    #oma
    ax1.scatter(stats2_oma[0,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#000000")#,label='control oma (t. atm.)')
-   ax1.scatter(stats2_oma[1,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#ff0044")#,label='w_only oma (t. atm.)')
-   ax1.scatter(stats2_oma[2,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#228200")#,label='w_so_elev5 oma (t. atm.)') #55ff00
+   ax1.scatter(stats2_oma[1,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#ff0044")#,label='w_incl oma (t. atm.)')
+   ax1.scatter(stats2_oma[2,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#ff8c00")#,label='w_so_elev5 oma (t. atm.)') #55ff00
    ax1.scatter(stats2_oma[3,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#00aaff")#,label='w_so_elev10 oma (t. atm.)')
    ax1.scatter(stats2_oma[4,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#8800ff")#,label='so_elev10 oma (t. atm.)')
 

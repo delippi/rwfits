@@ -2,10 +2,10 @@
 
 
 start=2015103000
-#end=2015103000
 end=2015103100
 hr=03
 envirs="rw_c008 rw_019 rw_021 rw_022 rw_023"
+envirs="rw_030 rw_031 rw_032"
 
 mkdir -p ./logs
 mkdir -p ./jobs
@@ -16,7 +16,7 @@ for envir in $envirs; do
    machine="THEIA"
    if [[ $machine == "THEIA" ]]; then
       export ndate=/home/Donald.E.Lippi/bin/ndate
-      submit="qsub"
+      submit="sbatch"
    else
       export ndate=/nwprod/util/exec/ndate
       submit="bsub <"
