@@ -127,31 +127,31 @@ if(True):
    # XP
    #omb
    ax1.plot(stats_omb[0,:,vari],levels_int,color='#000000',marker='o',markersize=l_dot_size,label='control omb',    linewidth=linewidth,linestyle='-')
-#   ax1.plot(stats_omb[1,:,vari],levels_int,color='#ff0044',marker='o',markersize=l_dot_size,label='w_only omb',     linewidth=linewidth,linestyle='-')
-#   ax1.plot(stats_omb[2,:,vari],levels_int,color='#55ff00',marker='o',markersize=l_dot_size,label='w_so_elev5 omb', linewidth=linewidth,linestyle='-')
-#   ax1.plot(stats_omb[3,:,vari],levels_int,color='#00aaff',marker='o',markersize=l_dot_size,label='w_so_elev10 omb',linewidth=linewidth,linestyle='-')
-#   ax1.plot(stats_omb[4,:,vari],levels_int,color='#8800ff',marker='o',markersize=l_dot_size,label='so_elev10 omb',  linewidth=linewidth,linestyle='-')
+   ax1.plot(stats_omb[1,:,vari],levels_int,color='#ff0044',marker='o',markersize=l_dot_size,label='w_only omb',     linewidth=linewidth,linestyle='-')
+   ax1.plot(stats_omb[2,:,vari],levels_int,color='#ff8c00',marker='o',markersize=l_dot_size,label='w_so_elev5 omb', linewidth=linewidth,linestyle='-')
+   ax1.plot(stats_omb[3,:,vari],levels_int,color='#00aaff',marker='o',markersize=l_dot_size,label='w_so_elev10 omb',linewidth=linewidth,linestyle='-')
+   ax1.plot(stats_omb[4,:,vari],levels_int,color='#8800ff',marker='o',markersize=l_dot_size,label='so_elev10 omb',  linewidth=linewidth,linestyle='-')
 #   #oma
    ax1.plot(stats_oma[0,:,vari],levels_int,color='#000000',marker='^',markersize=l_dot_size,label='control oma',    linewidth=linewidth,linestyle='--')
-#   ax1.plot(stats_oma[1,:,vari],levels_int,color='#ff0044',marker='^',markersize=l_dot_size,label='w_only oma',     linewidth=linewidth,linestyle='--')
-#   ax1.plot(stats_oma[2,:,vari],levels_int,color='#55ff00',marker='^',markersize=l_dot_size,label='w_so_elev5 oma', linewidth=linewidth,linestyle='--')
-#   ax1.plot(stats_oma[3,:,vari],levels_int,color='#00aaff',marker='^',markersize=l_dot_size,label='w_so_elev10 oma',linewidth=linewidth,linestyle='--')
-#   ax1.plot(stats_oma[4,:,vari],levels_int,color='#8800ff',marker='^',markersize=l_dot_size,label='so_elev10 oma',  linewidth=linewidth,linestyle='--')
+   ax1.plot(stats_oma[1,:,vari],levels_int,color='#ff0044',marker='^',markersize=l_dot_size,label='w_only oma',     linewidth=linewidth,linestyle='--')
+   ax1.plot(stats_oma[2,:,vari],levels_int,color='#ff8c00',marker='^',markersize=l_dot_size,label='w_so_elev5 oma', linewidth=linewidth,linestyle='--')
+   ax1.plot(stats_oma[3,:,vari],levels_int,color='#00aaff',marker='^',markersize=l_dot_size,label='w_so_elev10 oma',linewidth=linewidth,linestyle='--')
+   ax1.plot(stats_oma[4,:,vari],levels_int,color='#8800ff',marker='^',markersize=l_dot_size,label='so_elev10 oma',  linewidth=linewidth,linestyle='--')
 
    #0-2000 hpa level
    y_of_dot_omb=stats2_omb[0,:,vari]*0+0.5
    y_of_dot_oma=stats2_omb[0,:,vari]*0+0.25
 
    #omb
-   ax1.scatter(stats2_omb[0,:,vari],y_of_dot_omb, marker='o',s=dot_size,color="#000000",label='control omb (t. atm.)')
+#   ax1.scatter(stats2_omb[0,:,vari],y_of_dot_omb, marker='o',s=dot_size,color="#000000",label='control omb (t. atm.)')
 #   ax1.scatter(stats2_omb[1,:,vari],y_of_dot_omb, marker='o',s=dot_size,color="#ff0044",label='w_only omb (t. atm.)')
-#   ax1.scatter(stats2_omb[2,:,vari],y_of_dot_omb, marker='o',s=dot_size,color="#55ff00",label='w_so_elev5 omb (t. atm.)')
+#   ax1.scatter(stats2_omb[2,:,vari],y_of_dot_omb, marker='o',s=dot_size,color="#ff8c00",label='w_so_elev5 omb (t. atm.)')
 #   ax1.scatter(stats2_omb[3,:,vari],y_of_dot_omb, marker='o',s=dot_size,color="#00aaff",label='w_so_elev10 omb (t. atm.)')
 #   ax1.scatter(stats2_omb[4,:,vari],y_of_dot_omb, marker='o',s=dot_size,color="#8800ff",label='so_elev10 omb (t. atm.)')
    #oma
-   ax1.scatter(stats2_oma[0,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#000000",label='control oma (t. atm.)')
+#   ax1.scatter(stats2_oma[0,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#000000",label='control oma (t. atm.)')
 #   ax1.scatter(stats2_oma[1,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#ff0044",label='w_only oma (t. atm.)')
-#   ax1.scatter(stats2_oma[2,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#55ff00",label='w_so_elev5 oma (t. atm.)')
+#   ax1.scatter(stats2_oma[2,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#ff8c00",label='w_so_elev5 oma (t. atm.)')
 #   ax1.scatter(stats2_oma[3,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#00aaff",label='w_so_elev10 oma (t. atm.)')
 #   ax1.scatter(stats2_oma[4,:,vari],y_of_dot_oma, marker='^',s=dot_size,color="#8800ff",label='so_elev10 oma (t. atm.)')
 
@@ -179,7 +179,7 @@ elif(include_legend and legend_is_separate_figure):
    plt.savefig('./'+var+'_'+pdy+'.fv3gfs.t'+cyc+'z.rwfits.tm'+tmxx+'.png',bbox_extra_artists=(title,),bbox_inches='tight')
    plt.ion(); plt.show() #; plt.pause(0.001); raw_input("Press [enter] to continue.") #create a blocking figure and waits for user to inspect
    figlegend = plt.figure(2,figsize=(20,2))
-   plt.figlegend(*ax1.get_legend_handles_labels(),loc='center',fontsize=legend_fontsize,ncol=4,scatterpoints=1,prop={'size': 18})
+   plt.figlegend(*ax1.get_legend_handles_labels(),loc='center',fontsize=legend_fontsize,ncol=2,scatterpoints=1,prop={'size': 18})
    plt.ion(); plt.show() #; plt.pause(0.001); raw_input("Press [enter] to continue.") #create a non-blocking figure
    figlegend.savefig('legend.png')
 
